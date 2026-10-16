@@ -1,0 +1,10 @@
+macro_genero,n_canciones,popularity_real_media,popularity_predicha_media,MAE,sesgo_promedio
+jazz-soul-funk,506,38.769,37.336,16.912,-1.433
+urbano,613,37.321,38.074,12.127,0.752
+electronica,2990,33.49,33.286,11.843,-0.205
+folk-singer,990,33.517,33.565,11.503,0.048
+pop-mainstream,1468,42.231,42.408,10.74,0.177
+rock-metal,2984,36.353,36.414,10.689,0.061
+clasica-instrumental,1558,33.683,32.629,10.197,-1.054
+otros,1680,30.326,30.104,7.484,-0.222
+world-regional,3480,35.595,36.082,7.327,0.486

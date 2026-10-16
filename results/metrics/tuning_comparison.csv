@@ -1,0 +1,4 @@
+modelo,rmse_cv_default,rmse_cv_tuned,mejores_hiperparametros
+Ridge Regressor,15.0736,15.0735,{'modelo__alpha': 5.0}
+Random Forest Regressor,14.8237,14.5153,"{'modelo__n_estimators': 300, 'modelo__min_samples_split': 5, 'modelo__min_samples_leaf': 4, 'modelo__max_features': 0.33, 'modelo__max_depth': None}"
+Gradient Boosting,14.719,14.6968,"{'modelo__max_iter': 300, 'modelo__max_depth': 10, 'modelo__learning_rate': 0.05, 'modelo__l2_regularization': 0.1}"
