@@ -98,3 +98,36 @@ Se evaluó el error del modelo (MAE y sesgo promedio) desagregado por `macro_gen
 - Como trabajo futuro, se podría extender el modelo con **XGBoost/LightGBM** y validar si una búsqueda de hiperparámetros más exhaustiva reduce aún más el RMSE, así como incorporar variables externas (fecha de lanzamiento, métricas de redes sociales) si estuvieran disponibles.
 
 ## 10. Reproducibilidad y estructura del proyecto
+
+proyecto-spotify/
+├── data/
+│ ├── raw/dataset.csv
+│ └── processed/ (dataset_limpio.csv, train.csv, test.csv)
+├── notebooks/
+│ ├── 01_EDA.ipynb
+│ ├── 02_Preparacion_y_No_Supervisado.ipynb
+│ └── 03_Modelado_Supervisado_y_Eval.ipynb
+├── src/
+│ ├── config.py
+│ ├── preprocessing.py
+│ ├── pipeline.py
+│ ├── unsupervised.py
+│ ├── model_training.py
+│ └── model_evaluation.py
+├── models/ (preprocesadores, kmeans, baseline, ridge, random_forest, gradient_boosting, best_model)
+├── images/
+├── results/metrics/
+├── README.md
+└── requirements.txt
+
+
+**Para reproducir el proyecto desde cero:**
+
+```bash
+pip install -r requirements.txt
+python -m src.preprocessing
+```
+
+Luego ejecutar en orden: `02_Preparacion_y_No_Supervisado.ipynb` → `03_Modelado_Supervisado_y_Eval.ipynb`.
+
+Todos los estadísticos (imputación, escalado, encoding) se ajustan exclusivamente sobre el conjunto de entrenamiento (`Train`), garantizando que `Test` se mantiene como datos verdaderamente no vistos durante todo el proceso.
